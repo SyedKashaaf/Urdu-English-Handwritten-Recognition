@@ -80,10 +80,15 @@ Python · PyTorch · Gradio · OpenCV · Conditional GAN · Kaggle (training)
 ├── config.json                                # Class labels + model config
 ├── model.pt                                   # Trained model weights
 ├── requirements.txt
-├── ml-project-handwritten-language-detection.ipynb   # Full training pipeline
-│                                                        (EDA → preprocessing → GAN → training → eval)
-├── assets/                                    # Demo screenshots used in this README
-└── Urdu-English_handwritten_Recognition_Report.docx  # Full project report
+├── notebooks/
+       └── ml-project-handwritten-language-detection.ipynb   # Full training pipeline
+           (EDA → preprocessing → GAN → training → eval)
+├── assets/                     # Demo screenshots used in this README
+       └── README.md
+       └── demo_english_char.png
+       └── demo_text_detection.png
+       └── demo_unknown_rejection.png
+       └── demo_urdu_char.png
 ```
 
 ## Running locally
