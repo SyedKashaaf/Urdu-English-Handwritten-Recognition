@@ -2,11 +2,22 @@
 
 A multilingual handwriting recognition system that classifies handwritten **Urdu** and **English** characters, automatically detects which language a character belongs to, and rejects unsupported scripts (Arabic, Chinese, Hindi) instead of guessing.
 
-
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.0-EE4C2C)
 ![Gradio](https://img.shields.io/badge/Gradio-4.0-orange)
 ![License](https://img.shields.io/badge/License-MIT-green)
+
+## Demo
+
+| Urdu character recognition | Text-level detection |
+|---|---|
+| ![Urdu character detected](assets/demo_urdu_char.png) | ![Text detection tab](assets/demo_text_detection.png) |
+
+| English character recognition | Unknown-script rejection |
+|---|---|
+| ![English character predicted](assets/demo_english_char.png) | ![Unknown script rejected](assets/demo_unknown_rejection.png) |
+
+Run it yourself in under a minute — see [Running locally](#running-locally) below.
 
 ---
 
@@ -20,7 +31,7 @@ Urdu handwriting recognition is underexplored compared to English, mainly becaus
 - An explicit **"Unknown" language class**, trained on Arabic, Chinese, and Hindi samples, so the model can genuinely refuse predictions instead of forcing a wrong guess
 - A **frozen-encoder extension mechanism** — new languages can be added later with just a new lightweight head, no full retraining
 
-Trained on **582,089 images across 7 datasets**, deployed as a live Gradio app on Hugging Face Spaces.
+Trained on **582,089 images across 7 datasets**, with a Gradio app for interactive inference (see [Demo](#demo) above).
 
 ## Results
 
@@ -60,7 +71,7 @@ CharHead   CharHead      LangHead
 
 ## Tech stack
 
-Python · PyTorch · Gradio · OpenCV · Conditional GAN · Kaggle (training) · Hugging Face Spaces (deployment)
+Python · PyTorch · Gradio · OpenCV · Conditional GAN · Kaggle (training)
 
 ## Project structure
 
@@ -70,7 +81,9 @@ Python · PyTorch · Gradio · OpenCV · Conditional GAN · Kaggle (training) ·
 ├── model.pt                                   # Trained model weights
 ├── requirements.txt
 ├── ml-project-handwritten-language-detection.ipynb   # Full training pipeline
-                                                      (EDA → preprocessing → GAN → training → eval)
+│                                                        (EDA → preprocessing → GAN → training → eval)
+├── assets/                                    # Demo screenshots used in this README
+└── Urdu-English_handwritten_Recognition_Report.docx  # Full project report
 ```
 
 ## Running locally
