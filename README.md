@@ -112,7 +112,7 @@ This launches a local Gradio interface where you can upload a handwritten charac
 
 ## Author
 
-**Syed Kashaaf Haider** — BS Artificial Intelligence, Capital University of Science and Technology (CUST), Islamabad
+**Syed Muhammad Kashaaf Haider** — BS Artificial Intelligence, Capital University of Science and Technology (CUST), Islamabad
 [GitHub](https://github.com/SyedKashaaf) · [LinkedIn](https://linkedin.com/in/syedkashaaf)
 
 ## License
